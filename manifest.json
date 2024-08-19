@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "URL Cleaner",
+  "version": "1.0",
+  "description": "Cleans URLs for Amazon and Etsy.",
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.com/dp/*",
+        "https://www.amazon.com/*/dp/*",
+        "https://www.amazon.com/gp/product/*",
+        "https://www.amazon.com/*/ASIN/*",
+        "https://www.etsy.com/listing/*",
+        "https://www.etsy.com/shop/*",
+        "https://i.etsystatic.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "48": "icons/icon.png"
+    }
+  }
+}
