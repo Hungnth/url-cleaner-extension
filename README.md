@@ -11,7 +11,7 @@ This Chrome extension cleans and simplifies URLs for Amazon and Etsy. It automat
 
 ### Manual Installation
 
-1. Download the extension code from this repository.
+1. Download the extension code from this repository. [Download extension](https://github.com/Hungnth/url-cleaner-extension/archive/refs/heads/main.zip)
 2. Open Chrome and navigate to `chrome://extensions/`.
 3. Enable "Developer mode" in the top right corner.
 4. Click on "Load unpacked" and select the folder containing the extension files.
