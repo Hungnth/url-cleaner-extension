@@ -40,6 +40,23 @@ function cleanEtsyURL() {
     window.history.pushState({}, "", url);
   }
 
+  // if (url.indexOf("/il_fullxfull") !== -1) {
+  //   return;
+  // }
+
+  // if (url.indexOf("/il_") !== -1) {
+  //   var dotIndex = url.indexOf(".", url.indexOf("/il_"));
+  //   url =
+  //     url.substring(0, url.indexOf("/il_")) +
+  //     "/il_fullxfull" +
+  //     url.substring(dotIndex);
+  //   window.location.href = url;
+  // }
+}
+
+function etsy_img() {
+  var url = window.location.href;
+
   if (url.indexOf("/il_fullxfull") !== -1) {
     return;
   }
@@ -59,4 +76,6 @@ if (window.location.hostname.includes("amazon.com")) {
   cleanAmazonURL();
 } else if (window.location.hostname.includes("etsy.com")) {
   cleanEtsyURL();
+} else if (window.location.hostname.includes("i.etsystatic.com")) {
+  etsy_img();
 }
